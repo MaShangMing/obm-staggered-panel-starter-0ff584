@@ -1,0 +1,7 @@
+import pathlib
+import subprocess
+import sys
+
+if __name__ == "__main__":
+    here = pathlib.Path(__file__).resolve().parent
+    raise SystemExit(subprocess.call([sys.executable, str(here.parent / "eval_dev" / "selftest.py"), str(here)]))
